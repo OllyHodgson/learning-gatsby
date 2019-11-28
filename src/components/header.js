@@ -1,42 +1,32 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+const Header = ({ siteTitle, siteSubTitle }) => (
+  <div className="header-container">
+    <header className="header olly-transition-group">
+      <img
+        className="profile-shot olly-transition olly-transition-hidden"
+        src="media/images/profile_250.jpg"
+        alt=""
+      />
+      <h1 className="fn olly-transition olly-transition-hidden">
+        <span> {siteTitle}</span>
       </h1>
-    </div>
-  </header>
+      <h2 className="olly-transition olly-transition-hidden">
+        <span>{siteSubTitle}</span>
+      </h2>
+    </header>
+  </div>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  siteSubTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
+  siteSubTitle: ``,
 }
 
 export default Header
