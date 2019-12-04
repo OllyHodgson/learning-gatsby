@@ -3,12 +3,16 @@ import React from "react"
 import SectionTitle from "./section-title"
 
 const Section = ({ children, className, icon, id, title }) => {
-  const sectionClassName = `content olly-transition olly-transition-hidden content-${id} ${className}`
+  let contentClassname = "content"
+  if (icon) {
+    contentClassname = "content content-three"
+  }
+  const sectionClassname = `${contentClassname} olly-transition olly-transition-hidden content-${id} ${className}`
   return (
-    <div id={id} className={sectionClassName}>
+    <div id={id} className={sectionClassname}>
       {title && <SectionTitle title={title} />}
       <div className="part2">{children}</div>
-      <div className="part3">{icon && icon}</div>
+      {icon && <div className="part3">{icon}</div>}
     </div>
   )
 }

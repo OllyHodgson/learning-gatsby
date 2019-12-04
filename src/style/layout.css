@@ -270,6 +270,7 @@ The content.
 
 .content h3,
 .content h4,
+.content h5,
 .content p {
   font-size: 1em;
   margin: 0;
@@ -591,4 +592,21 @@ Lightbox button colours
 }
 .with-featherlight .featherlight .featherlight-content {
   min-width: 300px;
+}
+
+/*
+Latest blog post
+*/
+.post .post-header {
+  margin-bottom: 1rem;
+}
+@media (min-width: 500px) {
+  .post .post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .post .post-date {
+    font-size: 0.875rem;
+  }
 }

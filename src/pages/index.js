@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Separator from "../components/separator"
 import Section from "../components/section"
 import VancouverIsland from "../components/vanvouver-island"
+import LatestPost from "../components/latest-post"
 import LinkList from "../components/link-list"
 import LinkListItem from "../components/link-list-item"
 
@@ -14,7 +15,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Section id="designer" title="A front-end web developer and designer.">
+      <Section id="designer" title="A front-end web developer and designer">
         <p>
           I've got masses of experience building fast, responsive, easy to use
           websites which work across a huge variety of devices, browsers,
@@ -46,7 +47,7 @@ const IndexPage = () => {
         </p>
       </Section>
       <Separator />
-      <Section id="biker" title=">A mountain biker.">
+      <Section id="biker" title="A mountain biker">
         <p>
           The narrow ribbon of sinuous, beautiful singletrack, cutting through
           the trees, ever changing with the weather. That epic ride which takes
@@ -63,7 +64,7 @@ const IndexPage = () => {
       <Separator />
       <Section
         id="how"
-        title="All manner of other things."
+        title="All manner of other things"
         icon={vanvouverIsland}
       >
         <p className="adr">
@@ -150,6 +151,10 @@ const IndexPage = () => {
             subTitle="It's nice to find a software community as nice as this one"
           />
         </LinkList>
+      </Section>
+      <Separator />
+      <Section title="Latest blog post" id="blog">
+        <LatestPost />
       </Section>
     </Layout>
   )
